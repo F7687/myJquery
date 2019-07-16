@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="myJQuery.js"></script>
+		<style type="text/css">
+			div{width: 50px;height: 50px;border: 1px solid black;}
+			.b{background-color: aqua;}
+			.a{color: brown;background-color: cadetblue;}
+			.c{border-color: blueviolet;}
+			.new{width: 200px;height: 200px;}
+			.d{border-width:10px;border-color: #00FFFF;}
+			.e{font-size: 24px;text-align: center;}
+			.f{color: chartreuse;}
+		</style>
+	</head>
+	<body>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div class="dv d" id="dvv">单个的Css</div>
+		<script type="text/javascript">
+			var box=$$('div');
+			
+			console.log(box);
+			//console.log(box.style.css);
+			box.addClass("b");
+			box.removeClass("b");
+			box.addClass("a");
+			box.toggleClass("c");
+			
+			var dv=$("#dvv");
+			console.log(dv);
+			dv.addClass("new");
+			dv.css("backgroundColor","red");
+			dv.css("width",600);
+			dv.addClass("e");
+			dv.toggleClass("f");
+			dv.removeClass("d");
+			dv.addChild("p","hahahaha");
+			console.log(dv.addChild("div"));
+			dv.addChild("div","666");
+			var t=dv.addChild("p");
+			console.log(t);
+			t.innerText="hahahahhaha";
+		</script>
+	</body>
+</html>
